@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Songs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Instrument</th>
+      <th>Key</th>
+      <th>High note</th>
+      <th>Lyrics</th>
+      <th>Memorized</th>
+      <th>Performed on</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td><%= song.title %></td>
+        <td><%= song.artist_id %></td>
+        <td><%= song.instrument_id %></td>
+        <td><%= song.key %></td>
+        <td><%= song.high_note %></td>
+        <td><%= song.lyrics %></td>
+        <td><%= song.memorized %></td>
+        <td><%= song.performed_on %></td>
+        <td><%= song.notes %></td>
+        <td><%= link_to 'Show', song %></td>
+        <td><%= link_to 'Edit', edit_song_path(song) %></td>
+        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Song', new_song_path %>
