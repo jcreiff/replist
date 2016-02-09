@@ -12,7 +12,7 @@
       <th>High note</th>
       <th>Lyrics</th>
       <th>Memorized</th>
-      <th>Performed on</th>
+      <th>Last Performed</th>
       <th>Notes</th>
       <th colspan="3"></th>
     </tr>
@@ -22,8 +22,8 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= song.title %></td>
-        <td><%= song.artist_id %></td>
-        <td><%= song.instrument_id %></td>
+        <td><%= song.artist.name %></td>
+        <td><%= song.instrument.name %></td>
         <td><%= song.key %></td>
         <td><%= song.high_note %></td>
         <td><%= song.lyrics %></td>
