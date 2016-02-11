@@ -6,6 +6,6 @@ class Song < ActiveRecord::Base
   scope :by_key, -> { order(:key)}
 
   def last_performed
-    performed_on.strftime "%b %d %Y"
+    performed_on.strftime "%b %_d %Y"
   end
 end
