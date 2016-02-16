@@ -11,6 +11,10 @@ class SongsController < ApplicationController
     @songs = Song.by_key
   end
 
+  def date_sort
+    @songs = Song.by_date
+  end
+
   # GET /songs/1
   # GET /songs/1.json
   def show
