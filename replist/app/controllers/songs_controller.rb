@@ -7,6 +7,10 @@ class SongsController < ApplicationController
     @songs = Song.by_title
   end
 
+  def key_sort
+    @songs = Song.by_key
+  end
+
   # GET /songs/1
   # GET /songs/1.json
   def show

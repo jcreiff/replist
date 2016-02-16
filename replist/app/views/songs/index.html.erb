@@ -8,16 +8,16 @@
       <th>Title</th>
       <th>Artist</th>
       <th>Instrument</th>
-      <th>Key</th>
+      <th><%= link_to "Key", songs_by_key_path, remote: true %></th>
       <th>High note</th>
       <th>Memorized</th>
       <th>Last Performed</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-  <div id="song-list">
+  <tbody id="song-list">
     <%= render partial: 'song_list' %>
-  </div>
+  </tbody>
 </table>
 
 <br>

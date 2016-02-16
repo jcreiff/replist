@@ -1,16 +1,13 @@
-<div>
-  <tbody>
-    <% @songs.each do |song| %>
-      <tr>
-        <td><%= link_to "#{song.title}", song %></td>
-        <td><%= link_to "#{song.artist.name}", song.artist %></td>
-        <td><%= song.instrument.name %></td>
-        <td><%= song.key %></td>
-        <td><%= song.high_note %></td>
-        <td><%= song.memorized %></td>
-        <td><%= song.last_performed %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</div>
+
+<% @songs.each do |song| %>
+  <tr>
+    <td><%= link_to "#{song.title}", song %></td>
+    <td><%= link_to "#{song.artist.name}", song.artist %></td>
+    <td><%= song.instrument.name %></td>
+    <td><%= song.key %></td>
+    <td><%= song.high_note %></td>
+    <td><%= song.memorized %></td>
+    <td><%= song.last_performed %></td>
+    <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
