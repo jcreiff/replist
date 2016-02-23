@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :instrument %><br>
-    <%= f.collection_select(:instrument_id, Instrument.all, :id, :name, prompt: true) %>
+    <%= f.select(:instrument, options_for_select([['Guitar', "Guitar"], ['Piano', "Piano"], ['Bass', "Bass"]], @song.instrument)) %>
   </div>
   <div class="field">
     <%= f.label :key %><br>

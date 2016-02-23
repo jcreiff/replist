@@ -7,7 +7,7 @@
     <tr>
       <th><%= link_to "Title", songs_path, remote: true %></th>
       <th>Artist</th>
-      <th>Instrument</th>
+      <th><%= link_to "Instrument", songs_by_instrument_path, remote: true %></th>
       <th><%= link_to "Key", songs_by_key_path, remote: true %></th>
       <th>High note</th>
       <th>Memorized</th>

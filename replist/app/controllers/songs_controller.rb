@@ -15,6 +15,10 @@ class SongsController < ApplicationController
     @songs = Song.by_date
   end
 
+  def instrument_sort
+    @songs = Song.by_instrument
+  end
+
   # GET /songs/1
   # GET /songs/1.json
   def show
@@ -77,6 +81,6 @@ class SongsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def song_params
-      params.require(:song).permit(:title, :artist_id, :instrument_id, :key, :high_note, :lyrics, :memorized, :performed_on, :notes)
+      params.require(:song).permit(:title, :artist_id, :instrument, :key, :high_note, :lyrics, :memorized, :performed_on, :notes)
     end
 end
