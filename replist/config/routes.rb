@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'songs_by_key', to: 'songs#key_sort'
   get 'songs_by_date', to: 'songs#date_sort'
   get 'songs_by_instrument', to: 'songs#instrument_sort'
+  get 'songs_by_status', to: 'songs#status_sort'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

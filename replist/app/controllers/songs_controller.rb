@@ -19,6 +19,10 @@ class SongsController < ApplicationController
     @songs = Song.by_instrument
   end
 
+  def status_sort
+    @songs = Song.by_status
+  end
+
   # GET /songs/1
   # GET /songs/1.json
   def show
