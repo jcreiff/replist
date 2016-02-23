@@ -36,8 +36,8 @@
     <%= f.text_area :lyrics %>
   </div>
   <div class="field">
-    <%= f.label :memorized %><br>
-    <%= f.check_box :memorized %>
+    <%= f.label :status %><br>
+    <%= f.select(:status, options_for_select([["Future"], ["In Progress"], ["Learned"], ["Memorized"]], @song.status)) %>
   </div>
   <div class="field">
     <%= f.label :performed_on %><br>

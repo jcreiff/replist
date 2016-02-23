@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223213445) do
+ActiveRecord::Schema.define(version: 20160223220620) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(version: 20160223213445) do
     t.string   "key"
     t.string   "high_note"
     t.text     "lyrics"
-    t.boolean  "memorized"
     t.date     "performed_on"
     t.text     "notes"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "instrument"
+    t.string   "status"
   end
 
 end
